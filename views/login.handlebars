@@ -1,0 +1,40 @@
+<div id="particles-js"></div>
+<main class="form-signin text-center">
+    {{#if errors}}
+    {{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show alert-width" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/each}}
+    {{else if success}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{else if register_success}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{register_success}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{else if msg}}
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+    <form method="POST">
+        <h1 class="h3 mb-3 fw-normal text-light">Please Login</h1>
+        <label for="loginUsername" class="visually-hidden">Username</label>
+        <input type="text" id="loginUsername" class="form-control" placeholder="Username" name="username"
+            value="{{username}}" required>
+        <label for="loginPassword" class="visually-hidden">Password</label>
+        <input type="password" id="loginPassword" class="form-control" placeholder="Password" name="password" required>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    </form>
+</main>
+<script src="/js/particles.js"></script>
+<script src="/js/config/particlesConfig.js"></script>
+<script>
+    $("body").css("overflow", "hidden");
+</script>

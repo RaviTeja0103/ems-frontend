@@ -1,0 +1,26 @@
+<main class="form-signin text-center">
+    {{#if errors}}
+    {{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show alert-width" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/each}}
+    {{/if}}
+    <form method="POST">
+        <h1 class="h3 mb-3 fw-normal">Register</h1>
+        <label for="registerEmpCode" class="visually-hidden">Emp Code</label>
+        <input type="text" id="registerEmpcode" class="form-control" placeholder="Emp Code" name="empcode" required
+            value="{{empcode}}">
+        <label for="registerUsername" class="visually-hidden">Username</label>
+        <input type="text" id="registerUsername" class="form-control" placeholder="Username" name="username"
+            value="{{username}}" required>
+        <label for="registerPassword1" class="visually-hidden">Password</label>
+        <input type="password" id="registerPassword1" class="form-control" placeholder="Password" name="password"
+            required>
+        <label for="registerPassword2" class="visually-hidden">Confirm Password</label>
+        <input type="password" id="registerPassword2" class="form-control" placeholder="Confirm Password"
+            name="confirmPassword" required>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    </form>
+</main>

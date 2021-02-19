@@ -1,0 +1,77 @@
+{
+    "main": {
+        "title": "EMS",
+        "url": "/"
+    },
+    "groups": [
+        {
+            "title": "Personal details",
+            "id": "personalDetails",
+            "links": [
+                {
+
+                    "title": "Personal details",
+                    "url": "/personal-details"
+                },
+                {
+                    "title": "Addresses",
+                    "url": "/addressess"
+                },
+                {
+                    "title": "more to come...",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Leaves",
+            "id": "leaves",
+            "links": [
+                {
+                    "title": "Apply for leave",
+                    "url": "/leaves/apply"
+                },
+                {
+                    "title": "Record",
+                    "url": "/leaves/record"
+                },
+                {
+                    "title": "more to come...",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Profile",
+            "id": "profile",
+            "links": [
+                {
+                    "title": "See Profile",
+                    "url": "/profile"
+                },
+                {
+                    "title": "Change Username or Password",
+                    "url": "/profile/update"
+                },
+                {
+                    "title": "more to come...",
+                    "url": "#"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "title": "Login",
+            "url": "/users/login"
+        },
+        {
+            "title": "Register",
+            "url": "/users/register"
+        },
+        {
+            "title": "Hello",
+            "url": "/api/v1/hello"
+        }
+    ]
+}

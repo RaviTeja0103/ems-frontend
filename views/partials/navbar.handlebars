@@ -1,0 +1,35 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" aria-label="First navbar example">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{navs.main.url}}">{{navs.main.title}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#allAboard"
+            aria-controls="allAboard" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="allAboard">
+            <div class="me-auto">
+                {{#if navs.groups}}
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    {{#each navs.groups}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="{{this.id}}" data-bs-toggle="dropdown"
+                            aria-expanded="false">{{this.title}}</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="{{this.id}}">
+                            {{#each this.links}}
+                            <li><a class="dropdown-item" href="{{this.url}}">{{this.title}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+            </div>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                {{#each navs.links}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{this.url}}" id="{{this.title}}">{{this.title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</nav>
